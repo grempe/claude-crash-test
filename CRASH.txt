@@ -1,0 +1,18 @@
+❯ claude
+file:///Users/glenn/.asdf/installs/nodejs/24.1.0/lib/node_modules/@anthropic-ai/claude-code/cli.js:712
+`);if(this.cache.set(Z,{content:I,encoding:Y,mtime:Q.mtimeMs}),this.cache.size>this.maxCacheSize){let W=this.cache.keys().next().value;if(W)this.cache.delete(W)}return{content:I,encoding:Y}}clear(){this.cache.clear()}invalidate(A){this.cache.delete(A)}getStats(){return{size:this.cache.size,entries:Array.from(this.cache.keys())}}}var nJA=new iJA;import{join as OVA,posix as Dh,resolve as yI9,sep as RVA}from"path";import{homedir as aJA}from"os";import{isAbsolute as JZ9,join as XZ9,resolve as FZ9,normalize as sJA,dirname as VZ9}from"path";function P7(A,B){let Q=B??BA()??M1().cwd();if(typeof A!=="string")throw new TypeError(`Path must be a string, received ${typeof A}`);if(typeof Q!=="string")throw new TypeError(`Base directory must be a string, received ${typeof Q}`);if(A.includes("\x00")||Q.includes("\x00"))throw new Error("Path contains null bytes");let Z=A.trim();if(!Z)return sJA(Q);if(Z==="~")return aJA();if(Z.startsWith("~/"))return XZ9(aJA(),Z.slice(2));if(JZ9(Z))return sJA(Z);return FZ9(Q,Z)}function Oy(A){let B=P7(A);try{if(M1().statSync(B).isDirectory())return B}catch{}return VZ9(B)}import{execSync as kr1}from"node:child_process";import*as YXA from"node:path/win32";var IXA=Q1(TK(),1);function yr1(A){try{return kr1(`dir "${A}"`,{stdio:"pipe"}),!0}catch{return!1}}function LZ9(A){if(A==="git"){let B=["C:\\Program Files\\Git\\cmd\\git.exe","C:\\Program Files (x86)\\Git\\cmd\\git.exe"];for(let Q of B)if(yr1(Q))return Q}try{return kr1(`where.exe ${A}`,{stdio:"pipe",encoding:"utf8"}).trim().split(`\r
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+
+Error: Path contains null bytes
+    at P7 (file:///Users/glenn/.asdf/installs/nodejs/24.1.0/lib/node_modules/@anthropic-ai/claude-code/cli.js:712:823)
+    at ni (file:///Users/glenn/.asdf/installs/nodejs/24.1.0/lib/node_modules/@anthropic-ai/claude-code/cli.js:746:3045)
+    at zPB (file:///Users/glenn/.asdf/installs/nodejs/24.1.0/lib/node_modules/@anthropic-ai/claude-code/cli.js:2237:1456)
+    at Qd (file:///Users/glenn/.asdf/installs/nodejs/24.1.0/lib/node_modules/@anthropic-ai/claude-code/cli.js:2237:2523)
+    at Qd (file:///Users/glenn/.asdf/installs/nodejs/24.1.0/lib/node_modules/@anthropic-ai/claude-code/cli.js:2237:2549)
+    at file:///Users/glenn/.asdf/installs/nodejs/24.1.0/lib/node_modules/@anthropic-ai/claude-code/cli.js:2237:2892
+    at Q (file:///Users/glenn/.asdf/installs/nodejs/24.1.0/lib/node_modules/@anthropic-ai/claude-code/cli.js:671:13288)
+    at CPB (file:///Users/glenn/.asdf/installs/nodejs/24.1.0/lib/node_modules/@anthropic-ai/claude-code/cli.js:2237:3128)
+    at file:///Users/glenn/.asdf/installs/nodejs/24.1.0/lib/node_modules/@anthropic-ai/claude-code/cli.js:2439:165
+    at Q (file:///Users/glenn/.asdf/installs/nodejs/24.1.0/lib/node_modules/@anthropic-ai/claude-code/cli.js:671:13288)
+
+Node.js v24.1.0
